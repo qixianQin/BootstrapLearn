@@ -189,7 +189,7 @@
 		<h6>h6. Bootstrap heading</h6>
 
 		<!--在标题内还可以包含<small>标签或赋予.small类的元素，可用用来标记副标题-->
-		<p><strong> 在标题内还可以包含&lt small &gt标签或赋予.small类的元素，可用用来标记副标题</strong></p>
+		<p><strong> 在标题内还可以包含&lt; small &gt;标签或赋予.small类的元素，可用用来标记副标题</strong></p>
 		<h1>h1. Bootstrap heading <small>Secondary text</small></h1>
 		<h2>h2. Bootstrap heading <small>Secondary text</small></h2>
 		<h3>h3. Bootstrap heading <small>Secondary text</small></h3>
@@ -198,7 +198,7 @@
 		<h6>h6. Bootstrap heading <small>Secondary text</small></h6>
 
 		<h2>页面主体</h2>
-		<p>Bootstrap 将全局 font-size 设置为14px, line-height 设置为1.428。这些属性直接赋予&lt body &gt 元素和所有段落元素。 另外， &lt p &gt (段落)元素还被设置了等于1/2行高（即10px的底部边距（margin）<br>
+		<p>Bootstrap 将全局 font-size 设置为14px, line-height 设置为1.428。这些属性直接赋予&lt body &gt 元素和所有段落元素。 另外， &lt; p &gt; (段落)元素还被设置了等于1/2行高（即10px的底部边距（margin）<br>
 		
 		通过添加 .lead 类可以让段落突出显示
 		</p>
@@ -218,20 +218,20 @@
 
 		<h2>内联文本元素</h2>
 		<h3>Maket text </h3>
-		<p>For higglighting a run of text due to its relevance in another context ,use the &lt mark &gt tag </p>
+		<p>For higglighting a run of text due to its relevance in another context ,use the &lt; mark &gt; tag </p>
 
 		<p>you can use the mark tag to <mark> highlighting </mark> text </p>
 
 		<h2> 被删除的文本</h2>
-		<p>对于被删除的文本 使用 &lt del &gt </p>
+		<p>对于被删除的文本 使用 &lt; del &gt; </p>
 		<del> This line  of text  is meant  to be treated  as delected text.</del>
 
 		<h2>插入文本</h2>
-		<p>额外插入的文本用 &lt ins &gt</p>
+		<p>额外插入的文本用 &lt; ins &gt;</p>
 		<ins>This line of text is meant to be treated as an addtion the document</ins>
 
 		<h2>带下划线的文本</h2>
-		<p>为文本添加下划线使用&lt u &gt </p> 	
+		<p>为文本添加下划线使用&lt; u &gt; </p> 	
 		<u>This line of text will render as underlinde</u>
 
 		<h2>小号文本</h2>
@@ -247,6 +247,259 @@
 		<p class="text-right"> Right aligend text </p>
 		<p class="text-justify"> Justified text</p>
 		<p class="text-nowrap">No wrap text.</p>
+
+
+		<h2> 改变字体大小写</h2>
+		<p>text-lowercase: 都改成小写    text-uppercase: 都改成大写  text-capitalize: 首字母大写</p>
+
+		<p class="text-lowercase"> TEXT lowercase</p>
+		<p class="text-uppercase"> text upperCASE</p>
+		<p class="text-capitalize"> text capitalize</p>
+
+		<h2>缩略词</h2>
+		<p>当鼠标悬停在缩写和缩写词上时就会显示完整内容，Bootstrap实现了对HTML的 abbr 元素的增强样式。 缩略语元素带有title属性，外观表现为带有较浅的虚线框，鼠标移至上面时会变成带有问好的指针。如果想看完整的内容可以吧鼠标悬停在缩略语上（使用辅助技术的用户也可以看到），但需要包含title属性</p>
+
+		<h3>基本缩略语</h3>
+		<p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr> </p>
+
+		<a href="#top">返回顶部</a>
+
+		<h2>列表</h2>
+		<p>无序列表：排列顺序无关紧要的一列元素  ul li ； 有序列表：顺序至关重要的一组元素： ol li</p>
+		<ul>
+			<li>hello</li>
+			<li>Html</li>
+			<li>css</li>
+		</ul>
+
+		<ol>
+			<li>hello</li>
+			<li>html</li>
+			<li>css</li>
+		</ol>
+
+		<h2>代码</h2>
+		<p>内联代码： 通过&lt; code &gt; 标签包裹内联样式的代码片段  ；<br>
+			用户输入： 通过&lt; kbd &gt; 标签标记用户通过键盘输入的内容。<br>
+			代码块： 多行代码可以使用 &lt; pre &gt; 标签。为了正确的展示代码，注意将尖括号做转义处理。<br>
+			变量： 通过&lt; var &gt; 标签标记变量 <br>
+			程序输出： 通过&lt; samp &gt; 标签来标记程序输出的内容。<br>
+		</p>
+
+		<p>例子：<br>
+			For example, <code>&lt; section &gt;</code> should be wrapped as inline <br>  
+			To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
+			To edit setting, press <kbd><kbd>ctrl</kbd>+<kbd>,</kbd></kbd> <br>
+			<pre> &lt; p &gt; sample text here ... &lt; /p &gt;</pre> <br>
+			<var>y</var> = <var>m</var><var>x</var> + <var>b</var> <br>
+			<samp>This text is meant to be treated as sample output from a computer program.</samp> <br>
+
+		</p>
+
+		<h2>表格</h2>
+		<h3>基本实例</h3>
+		<p> 为任意 &lt; table &gt; 标签添加 .table 类可以为其赋予基本的样式---少量的内补（padding） 和水平方向的分隔线。 这种方式看起来很多余，但是我们觉得，表格元素使用广泛，如果我们为其赋予默认样式可能会影响例如日历和日期选择类的插件，所有我们选择将此样式独立出来</p>
+		<table class="table">
+			<caption> Optional table caption.</caption>
+			<tr>
+				<th>#</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Username</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>Mark</td>
+				<td>Otto</td>
+				<td>@mdo</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Jacob</td>
+				<td>Thornto</td>
+				<td>@fat</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Larry</td>
+				<td>the Bird</td>
+				<td>@twitter</td>
+			</tr>
+			
+		</table>
+		<h3>条纹状表格</h3>
+		<p>通过 .table-striped 类可以给 &lt; tbody &gt; 之内的每一行增加斑马条纹样式。（IE8不支持）</p>
+		<table class="table table-striped">
+			<caption>实例：</caption>
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Username</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>Mark</td>
+					<td>Otto</td>
+					<td>@do</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Jacob</td>
+					<td>Thornton</td>
+					<td>@fat</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>Larry</td>
+					<td>the Bird</td>
+					<td>@twitter</td>
+				</tr>
+			</tbody>
+			
+		</table>
+		<h3>鼠标悬停</h3>
+		<p>通过添加 .table-hover 类可以让 &lt; tbody &gt; 中的每一行对鼠标悬停状态作出相应</p>
+		<table class="table table-hover">
+			<caption>实例：</caption>
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>UserName</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>Mark</td>
+					<td>Otto</td>
+					<td>@mdo</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Jack</td>
+					<td>Jack</td>
+					<td>@far</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>Larry</td>
+					<td>the Bird</td>
+					<td>@twitter</td>
+				</tr>
+			</tbody>
+			
+		</table>
+		<h3>紧缩表格</h3>
+		<p>通过添加 .table-condensed 类可以让表格更加紧凑，单元格中的内补（padding）均会减半</p>
+		<h3>状态类</h3>
+		<p>通过这些状态类可以为行或单元格设置颜色</p>
+
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>class</th>
+					<th>描述</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>.active</td>
+					<td>鼠标悬停在行或单元格上时设置的颜色</td>
+				</tr>
+				<tr>
+					<td>.success</td>
+					<td>标识成功或积极的动作</td>
+				</tr>
+				<tr>
+					<td>.info</td>
+					<td>标识普通的提示信息或动作</td>
+				</tr>
+				<tr>
+					<td>.warning</td>
+					<td>标识警告或需要用户注意</td>
+				</tr>
+				<tr>
+					<td>.danger</td>
+					<td>标识危险或潜在的带来负面影响的动作</td>
+				</tr>
+			</tbody>
+			
+		</table>
+		<table class="table table-hover">
+			<caption>实例：</caption>
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>Cloumn heading</th>
+					<th>Cloumn heading</th>
+					<th>Cloumn heading</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="active">
+					<td>1</td>
+					<td>cloumn content</td>
+					<td>cloumn content</td>
+					<td>cloumn content</td>
+				</tr>
+				<tr class="success">
+					<td>2</td>
+					<td>cloumn content</td>
+					<td>cloumn content</td>
+					<td>cloumn content</td>
+				</tr>
+				<tr class="warning">
+					<td>3</td>
+					<td>cloumn content</td>
+					<td>cloumn content</td>
+					<td>cloumn content</td>
+				</tr>
+				<tr class="danger">
+					<td>4</td>
+					<td>cloumn content</td>
+					<td>cloumn content</td>
+					<td>cloumn content</td>
+				</tr>
+				<tr class="info">
+					<td>5</td>
+					<td>cloumn content</td>
+					<td>cloumn content</td>
+					<td>cloumn content</td>
+				</tr>
+				<tr>
+					<td class="active">6</td>
+					<td>cloumn content</td>
+					<td class="success">cloumn content</td>
+					<td>cloumn content</td>
+				</tr>
+				<tr>
+					<td>7</td>
+					<td class="warning">cloumn content</td>
+					<td>cloumn content</td>
+					<td>cloumn content</td>
+				</tr>
+				<tr>
+					<td>8</td>
+					<td class="danger">cloumn content</td>
+					<td>cloumn content</td>
+					<td>cloumn content</td>
+				</tr>
+				<tr>
+					<td>9</td>
+					<td>cloumn content</td>
+					<td>cloumn content</td>
+					<td class="info">cloumn content</td>
+				</tr>
+			</tbody>
+		</table>
+
+
 	</div>
 
 
