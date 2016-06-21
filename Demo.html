@@ -499,7 +499,141 @@
 			</tbody>
 		</table>
 
+		<h3>响应式表格</h3>
+		<p>将任何 .table 元素包裹在 .table-responsive 元素内，即可创建响应式表格，其会在小屏幕设备上（小于768px）水平滚动。当屏幕大于768px 宽度时，水平滚动条消失。</p>
 
+		<h2>表单</h2>
+		<h3>基本实例</h3>
+		<p>单独的表单控件会被自动赋予一些全局样式。所有设置了 .form-control 类的&lt; input &gt; 、&lt;textarea &gt; 和 &lt; select &gt; 元素都将被默认设置宽度属性为 width：100% 。 将label元素和前面提到的控件包裹在 .form-group 中可以获得最好的排列。</p>
+
+
+		<form action="">
+			<div class="form-group">
+				<label for="exampleInputEmail1">Email address</label>
+				<input type="email" class="form-control" id="exampleInputEamil1" placeholder="Email" >
+			</div>
+			<div class="from-group">
+				<label for="exampleInputPassword1">Passwprd</label>
+				<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+			</div>
+
+			<div class="form-group">
+				<label for="exampleInputFile">File Input</label>
+				<input type="file" id="exampleInputFile">
+				<p class="help-block">Example block-level help text here.</p>
+			</div>
+			<div class="checkbox">
+				<label for="">
+					<input type="checkbox" name=""> Check me out
+				</label>
+			</div>
+			<button type="submit" class="btn btn-default">Submit</button>
+		</form>
+		<p>不要将表单组合输入框组混合使用： 不要将表单组直接和输入框组混合使用。建议将输入框组嵌套到表单组中使用。</p>
+		
+		<h3>内联表单</h3>
+		<p>为&lt; form &gt; 元素添加 .form-inline 类可使其内容左对齐并且表现为 inline-block 级别的控件。只适用于视口（viewport）至少在768px 宽度时（视口宽度再小的话就会使表单折叠）</p>
+
+		<p>可能需要手动设置宽度： 在Bootstrap中，输入框和单选/多选控件默认被设置为 width:100% 宽度。在内联表单，我们将这些元素的宽度设置为width：auto。因此，多个控件可以排列在同一行。根据布局需要，可以定制化组件。</p>
+
+		<p>一定要添加 <code>label</code>标签： 如果没有为每个输入控件设置label标签，屏幕阅读器将无法正确识别。对于这些内联表单，你可以通过为label设置.sr-noly 类将其隐藏。还有一些辅助技术提供label标签的替代方案，比如aria-label、aria-labelledby或title属性。如果这些都不存在，屏幕阅读器可能会采取使用placeholder属性，如果存在的话，使用占位符来替代其他的标记，但要注意，这种方法不是很妥当。</p>
+
+		<div class="bs-example" data-example-id="simple-form-inline">
+			
+			<form action="" class="form-inline">
+				<div class="form-group">
+					<label for="exampleInputName2"> Name </label>
+					<input type="text" id="exampleInputName2" class="form-control" placeholder="Jane Doe">
+				</div>
+				<div class="form-group">
+					<label for="exampleInputEmail2">Email</label>
+					<input type="email" id="exampleInputEmail2" class="form-control" placeholder="jane.doe@example.com"> 
+					
+				</div>
+				<button type="submit" class="btn btn-default">Send invitation</button>
+			</form>
+			
+		</div>
+
+		<div class="bs-example">
+			
+			<form action="" class="form-inline">
+				<div class="form-group">
+				<!-- sr-only 类会将该标签隐藏-->
+					<caption>sr-only 类将该标签隐藏了</caption>
+					<label for="" class="sr-only">Email address <input type="email" class="form-control" placeholder="Email" name=""></label>
+
+				</div>
+				<div class="form-group">
+					<label for="" class="sr-only">Password <input type="password" class="form-control" placeholder="Password" name=""></label>
+				</div>
+				<div class="checkbox">
+					<label for=""><input type="checkbox">Remenber me</label>
+				</div>
+				<button type="sumit" class="btn btn-default">Sing in</button>
+			</form>
+		</div>
+
+		<div class="bs-example">
+			<form class="form-inline">
+				<div class="form-group">
+					<label class="sr-onlys" for="exampleInputAmount">Amount (in dollars)</label>
+					<div class="input-group">
+						<div class="input-group-addon">$</div>
+						<input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+						<div class="input-group-addon">.00</div>
+					</div>
+				</div>
+				<button type="submit" class="btn btn-primary">Transfer cash</button>
+			</form>
+		</div>
+
+		<h3>水平排列的表单</h3>
+		<p>通过为表单添加 <code>.form-horizontal</code> 类，并联合使用Bootstrap预置栅格系统类，可以将<code>label</code>标签和控件组水平并排布局。这样做将改变<code>.form-group</code>的行为，使其表现为栅格系统中的行（row）,因此就无需在添加额外的<code>.row</code></p>
+
+		<div class="bs-example">
+			<form action="" class="form-horizontal">
+				<div class="form-group">
+					<label for="inputEamil3" class="col-sm-2 control-label">Email</label>
+					<div class="col-sm-10">
+						<input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+					<div class="col-sm-10">
+						<input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<div class="checkbox">
+							<label for="">
+								<input type="checkbox">Remember me
+							</label>
+							
+						</div>
+					</div>
+					
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<button type="submit" class="btn btn-default">Sign in</button>
+					</div>
+				</div>
+			</form>
+		</div>
+
+
+		<h3>被支持的控件</h3>
+		<p>表单布局实例中展示了其所支持的标准表单控件</p>
+		<h4>输入框</h4>
+		<p>包过大部分表单控件、文本输入或控件，还支持所有HTML5类型的输入控件： <code>text</code>、<code>password</code>、<code>datetime-local</code>、<code>date</code>、<code>month</code>、<code>time</code>、<code>week</code>、<code>number</code>、<code>email</code>、<code>url</code>、<code>search</code>、<code>tel</code>、<code>color</code></p>
+		<p><strong>必须添加类型声明</strong>:只有正确设置了<code>type</code>属性的输入控件才能被赋予正确的样式</p>
+
+		<div class="bs-example">
+			<input type="text" class="form-control" placeholder="Text input">
+		</div>
 	</div>
 
 
