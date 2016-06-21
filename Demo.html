@@ -634,6 +634,68 @@
 		<div class="bs-example">
 			<input type="text" class="form-control" placeholder="Text input">
 		</div>
+
+		<h4>文本域</h4>
+		<p>支持多行的文本表单控件，可根据需要修改<code>rows</code>属性</p>
+
+		<textarea class="form-control" rows="3" placeholder="textarea"></textarea>
+		<h4>多选框和单选框</h4>
+		<p>多选框（checkbook）用于选择列表中的一个或者多个选项，而单选框（radio）用于从多个多选项中选择一个</p>
+
+		<p>设置了<code>disabled</code>属性的单选或多选框都能被赋予合适的样式。对于和多选或单选框联合使用的<code>&lt;label &gt;</code>标签，如果也希望将悬停在上方的鼠标设置为“禁止点击”的样式，请将<code>.disabled</code>类赋予 <code>.radio</code>、<code>.radio-inline</code>、<code>.checkbox</code>、<code>.checkbox-inline</code>或<code>&lt;fieldset&gt;</code></p>
+
+		<h5>默认外观（堆叠在一起）</h5>
+		<div class="checkbox">
+			<label>
+				<input type="checkbox" name="">Option one is this and that &mdash; be sure to include why is't great
+			</label>
+		</div>
+		<div class="checkbox disabled ">
+			<label>
+				<input type="checkbox" disabled="" name="">Option two is disabled 
+			</label>
+		</div>
+
+		<div class="radio">
+			<label>
+				<input type="radio" name="optionsRadios" id="optionsRadios" value="option1" checked=""> Option one is this and that  &mdash; be sure to include why it's great
+			</label>
+		</div>
+		<div class="redio">
+			<label>
+				<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Option two can be something else and selecting it will deselect option one 
+			</label>
+		</div>
+		<div class="radio dis">
+			<label>
+				<input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled=""> Option three is disabled
+			</label>	
+		</div>
+
+		<h4>内联单选和多选框</h4>
+		<p>通过将<code>.checkbox-inline</code> 或 <code>.radio-inline</code>类应用到一系列的多选框（checkbox）或单选框（radio）控件上，可以使这些控件排列在一行</p>
+
+		<div class="bs-example">
+			<label class="checkbox-inline">
+				<input type="checkbox" id="inlineCheckbox1" value="option1">1
+			</label>
+			<label class="checkbox-inline">
+				<input type="checkbox" id="inlineCheckbox2" value="option2" name="">2
+			</label>
+			<label class="checkbox-inline">
+				<input type="checkbox" id="inlineCheckbox3" value="option3" name="">3
+			</label>
+			<br>
+			<label class="radio-inline">
+				<input type="radio" id="inlineRadio1" value="option1" name="radioOptions">1
+			</label>
+			<label class="radio-inline">
+				<input type="radio" name="radioOptions" id="inlineRadio2" value="option2">2
+			</label>
+			<label class="radion-inline">
+				<input type="radio" name="radioOptions" id="inlineRadio3" value="option3">3
+			</label>
+		</div>
 	</div>
 
 
