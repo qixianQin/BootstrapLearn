@@ -696,6 +696,31 @@
 				<input type="radio" name="radioOptions" id="inlineRadio3" value="option3">3
 			</label>
 		</div>
+		<h4>不带label文本的Checkbox 和 radio</h4>
+		<p>如果需要<code>&lt; label &gt;</code>内没有文字，输入框（input)正是你所希望的。<strong>目前只适用于非内联的checkbox和radio</strong>.请记住，仍然需要为适用辅助技术的用户提供某种形式的label（例如，使用<code>aria-label</code>)</p>
+
+		<div class="checkbox">
+			<label for="">
+				<input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+			</label>
+		</div>
+		<div class="radio">
+			<label for="">
+				<input type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+			</label>
+		</div>
+		<h4>下拉列表（select）</h4>
+		<p>注意，很多原生选择菜单 -即在Safari 和 Chrome 中 - 的圆角是无法通过修改<code>border-radius</code>属性来改变的</p>
+
+		<select name="" id="" class="form-control">
+			<option value="">1</option>
+			<option value="">2</option>
+			<option value="">3</option>
+			<option value="">4</option>
+		</select>
+
+		<h4>静态控件</h4>
+		<p>如果需要在表单中将一行纯文本和<code>label</code>元素放置同一行，为<code>p</code>元素添加<code>.form-control-static</code>类即可</p>
 	</div>
 
 
