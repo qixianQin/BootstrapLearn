@@ -721,6 +721,54 @@
 
 		<h4>静态控件</h4>
 		<p>如果需要在表单中将一行纯文本和<code>label</code>元素放置同一行，为<code>p</code>元素添加<code>.form-control-static</code>类即可</p>
+
+		<div class="bs-example">
+			<form class="form-control">
+				<div class="from-group">
+					<label class="col-sm-2 control-label" >
+						Email
+					</label>
+					<div class="col-sm-10">
+						<p class="form-control-static">
+							eamil@example.com
+						</p>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label" for="inputPassword">
+						Password
+					</label>
+					<div class="col-sm-10">
+						<input type="password" name="" class="form-control" id="inputpassword" placeholder="Password">
+					</div>
+				</div>
+			</form>
+		</div>
+
+
+		<div class="bs-control">
+			<form class="form-inline">
+				<div class="form-group">
+					<label class="sr-only">Email</label>
+					<p class="form-control-static">example@example.com</p>
+				</div>
+				<div class="form-group">
+					<label class="sr-only" for="inputPassword" >Password</label>
+					<input type="password" name="" class="form-control" id="inputPassword" placeholder="password">
+				</div>
+				<button type="submit" class="btn btn-default">Confirm identity</button>
+			</form>
+		</div>
+
+		<h4>焦点状态</h4>
+		<p>我们将某些表单控件的默认<code>outline</code>样式移除，然后对<code>:foucus</code>状态赋予<code>box-shadow</code>属性</p>
+
+		<input type="text" class="focus box-shadow">
+
+		<h4>禁用状态</h4>
+		<p>为输入框设置 <code>disabled</code>属性可以禁止其与用户有任何交互（焦点、输入等）。被禁用的输入框颜色更浅，并且还添加了 <code>not-allowed</code>鼠标状态</p>
+
+		<input type="text" name="" class="form-control" id="disableInput" placeholder="Disabel input here..."> 
 	</div>
 
 
