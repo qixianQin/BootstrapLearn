@@ -409,23 +409,23 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td>.active</td>
+					<td class="active">.active</td>
 					<td>鼠标悬停在行或单元格上时设置的颜色</td>
 				</tr>
 				<tr>
-					<td>.success</td>
+					<td class="success">.success</td>
 					<td>标识成功或积极的动作</td>
 				</tr>
 				<tr>
-					<td>.info</td>
+					<td class="info">.info</td>
 					<td>标识普通的提示信息或动作</td>
 				</tr>
 				<tr>
-					<td>.warning</td>
+					<td class="warning">.warning</td>
 					<td>标识警告或需要用户注意</td>
 				</tr>
 				<tr>
-					<td>.danger</td>
+					<td class="danger">.danger</td>
 					<td>标识危险或潜在的带来负面影响的动作</td>
 				</tr>
 			</tbody>
@@ -507,7 +507,7 @@
 		<p>单独的表单控件会被自动赋予一些全局样式。所有设置了 .form-control 类的&lt; input &gt; 、&lt;textarea &gt; 和 &lt; select &gt; 元素都将被默认设置宽度属性为 width：100% 。 将label元素和前面提到的控件包裹在 .form-group 中可以获得最好的排列。</p>
 
 
-		<form action="">
+		<form action="" >
 			<div class="form-group">
 				<label for="exampleInputEmail1">Email address</label>
 				<input type="email" class="form-control" id="exampleInputEamil1" placeholder="Email" >
@@ -1027,9 +1027,19 @@
 		<p><strong>通过为父元素</strong>添加<code>.clearfix</code>类可以很容易的清除浮动（<code>float</code>）。</p>
 
 		<div class="clearfix">
-			
+			<button type="button" class="btn btn-default">Default button</button>
 		</div>
 
+		<h4>显示或隐藏内容</h4>
+		<p><code>.show、.hidden</code>类可以强制任意元素显示或隐藏（对于屏幕阅读器也能起效）。这些类通过<code>!important</code>来避免CSS样式优先级问题，就像 quick float 一样的做法。注意，这些类只对块级元素起作用，另外，还可以使用mixin使用。</p>
+		<p><code>.invisible</code>类可以被用来仅仅影响元素的可见性，也就说，元素的<code>display</code>属性不被改变，并且这个元素仍然影响文档流的排布。</p>
+
+		<div class="show">
+			
+		</div>
+		<div class="hidden">
+			
+		</div>
 
 	</div>
 

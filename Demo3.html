@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>组件</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, inital-sale=1.0" >
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" href="CSS//bootstrap.min.css" type="text/css">
+	<link rel="stylesheet" type="text/css" href="CSS//grid.css">
+</head>
+<body>
+
+	<div class="container">
+		<p>为设置正确的内补（padding），需要在图标和文本之间添加一个空格。</p>
+		<p><strong>不要和其他组件混合使用</strong>：图标类不能喝其他组件直接联合使用。它们不能在同一个元素上与其他类共同存在。应该创建一个嵌套的<code>&lt;span &gt;</code>标签，并将图标类应用到这个<code>&lt;span &gt;</code>标签上。</p>
+		<p><strong>只对内容为空的元素起作用：</strong>图标类只能应用在不包含任何文本内容或子元素的元素上</p>
+
+		<p>可以把图标应用到按钮、工具条中的按钮组、导航或输入框等地方。</p>
+
+		<button type="button" class="btn btn-default" aria-label="Left Align">
+			<span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+		</button>
+		<button type="button" class="btn btn-default btn-lg">
+			<span class="glyphicon glyphicon-star" aria-hidden="true">Star</span>
+		</button>
+	</div>
+	
+
+	<script type="text/javascript" src="JS//jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="JS//bootstrap.min.js"></script>
+</body>
+</html>
