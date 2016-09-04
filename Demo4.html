@@ -402,7 +402,52 @@
       </div>
     </div>
 
+	</div>
+
+
+	<div>
+		<ul class="nav nav-tabs" role="tablist">
+			<li role="presentation" class="active">
+				<a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a>
+			</li>
+			<li role="presentation">
+				<a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a>
+			</li>
+			<li role="presentation">
+				<a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a>
+			</li>
+			<li role="presentation">
+				<a href="#setting" aria-controls="settings" role="tab" data-toggle="tab">Setting</a>
+			</li>
+		</ul>
+
+		<div class="tab-content">
+			<div role="tabpanel" class="tab-pane active" id="home"> hello HTML5</div>
+			<div role="tabpanel" class="tab-pane" id="profile">Hello java</div>
+			<div role="tabpanle" class="tab-pane" id="message">Hello javascript</div>
+			<div role="tabpanel" class="tab-pane" id="settings">Hello jQuery</div>
 		</div>
+	</div>
+
+	<h2>弹出框<small>popover.js</small></h2>
+	<h4>初始化</h4>
+	<p>由于性能的原因，工具提示和弹出框的data编程接口是必须要<strong>手动初始化的</strong>
+	在一个页面上一次性初始化所有弹出框的方式是通过<code>data-toggle</code> 属性选中他们：
+	<code>
+		$(function(){
+		$('[data-toggle = "popover"]').popover()
+		})
+	</code>
+
+	弹出框在按钮组或输入框组需要特殊设置： 当使用弹出框在<code>.btn-group 、.input-group</code>, 必须指定<code>container:'body'</code>来避免失效
+	</p>
+
+	<div class="bs-example bs-example-padded-bottom">
+		<button type="button" class="btn btn-lg btn-default" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging.Right?">
+		点我弹出/隐藏弹出框
+		</button>
+	</div>
+
 
 
 	</div>

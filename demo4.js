@@ -7,3 +7,7 @@ $('#exampleModal').on('show.bs.modal', function(event){
 })
 
 $('#myModal').modal(options)
+
+$(function(){
+	$('[data-toggle="popover"]').popover()
+})
